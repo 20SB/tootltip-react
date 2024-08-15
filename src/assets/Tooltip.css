@@ -1,39 +1,45 @@
+/* Container that wraps around the element with a tooltip */
 .tooltip-container {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Establishes a containing block for the tooltip (for absolute positioning) */
+    display: inline-block; /* Allows the element to have an inline display, like a text span */
 }
 
+/* General styles for the tooltip itself */
 .tooltip {
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 1;
-    text-align: center;
-    margin: 2px;
+    position: absolute; /* Positions the tooltip relative to its closest positioned ancestor (.tooltip-container) */
+    background-color: #333; /* Dark background color for the tooltip */
+    color: #fff; /* White text color for contrast */
+    padding: 5px 10px; /* Padding inside the tooltip for spacing */
+    border-radius: 5px; /* Rounded corners for the tooltip */
+    z-index: 1; /* Ensures the tooltip appears on top of other elements */
+    text-align: center; /* Centers the text within the tooltip */
+    margin: 2px; /* Slight margin around the tooltip */
 }
 
+/* Positioning the tooltip above the element */
 .tooltip.top {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 100%; /* Position the tooltip above the containing element */
+    left: 50%; /* Centers the tooltip horizontally with respect to the container */
+    transform: translateX(-50%); /* Adjusts the tooltip's position to fully center it */
 }
 
+/* Positioning the tooltip below the element */
 .tooltip.bottom {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 100%; /* Position the tooltip below the containing element */
+    left: 50%; /* Centers the tooltip horizontally with respect to the container */
+    transform: translateX(-50%); /* Adjusts the tooltip's position to fully center it */
 }
 
+/* Positioning the tooltip to the left of the element */
 .tooltip.left {
-    top: 50%;
-    right: 100%;
-    transform: translateY(-50%);
+    top: 50%; /* Centers the tooltip vertically with respect to the container */
+    right: 100%; /* Position the tooltip to the left of the containing element */
+    transform: translateY(-50%); /* Adjusts the tooltip's position to fully center it vertically */
 }
 
+/* Positioning the tooltip to the right of the element */
 .tooltip.right {
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
+    top: 50%; /* Centers the tooltip vertically with respect to the container */
+    left: 100%; /* Position the tooltip to the right of the containing element */
+    transform: translateY(-50%); /* Adjusts the tooltip's position to fully center it vertically */
 }
